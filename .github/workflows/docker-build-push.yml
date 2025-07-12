@@ -101,7 +101,7 @@ jobs:
       - name: Build and push Proxy Service Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./src/microservices/proxy
+          context: ./src/microservices/proxy/proxy
           push: true
           tags: ${{ steps.meta-proxy.outputs.tags }}
           labels: ${{ steps.meta-proxy.outputs.labels }}
