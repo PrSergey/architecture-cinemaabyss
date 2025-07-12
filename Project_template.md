@@ -275,6 +275,8 @@ cat .docker/config.json | base64
 
 #### Шаг 3
 Добавьте сюда скриншота вывода при вызове https://cinemaabyss.example.com/api/movies и  скриншот вывода event-service после вызова тестов.
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
 
 
 # Задание 4
@@ -350,6 +352,8 @@ minikube tunnel
 Потом вызовите 
 https://cinemaabyss.example.com/api/movies
 и приложите скриншот развертывания helm и вывода https://cinemaabyss.example.com/api/movies
+
+![img_6.png](img_6.png)
 
 ## Удаляем все
 
