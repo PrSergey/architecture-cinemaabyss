@@ -102,7 +102,7 @@ services:
   # Proxy Service (API Gateway)
   proxy-service:
     build:
-      context: ./src/microservices/proxy
+      context: ./src/microservices/proxy/proxy
       dockerfile: Dockerfile
     container_name: cinemaabyss-proxy-service
     depends_on:
