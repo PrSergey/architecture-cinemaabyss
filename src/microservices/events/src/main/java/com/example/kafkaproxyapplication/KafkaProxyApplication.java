@@ -39,7 +39,7 @@ public class KafkaProxyApplication {
 
 	public KafkaProxyApplication() {
 		this.port = System.getenv().getOrDefault("PORT", "8082");
-		this.kafkaBrokers = System.getenv().getOrDefault("KAFKA_BROKERS", "localhost:9092");
+		this.kafkaBrokers = System.getenv().getOrDefault("KAFKA_BROKERS", "kafka:9092");
 	}
 
 	public static void main(String[] args) {

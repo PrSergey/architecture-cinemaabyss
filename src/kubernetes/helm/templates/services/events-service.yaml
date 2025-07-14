@@ -30,15 +30,16 @@ spec:
           ports:
             - containerPort: {{ .Values.eventsService.service.targetPort }}
           env:
-            - name: KAFKA_HOST
+            - name: PORT
+              value: "{{ .Values.eventsService.service.targetPort }}"
+            - name: KAFKA_BROKER
               value: "kafka:9092"
           envFrom:
             - configMapRef:
                 name: cinemaabyss-config
             - secretRef:
                 name: cinemaabyss-secrets
-          resources:
-            {{- toYaml .Values.eventsService.resources | nindent 10  }}
+          resources: {{- toYaml .Values.eventsService.resources | nindent 10 }}
           readinessProbe:
             httpGet:
               path: /api/events/health
